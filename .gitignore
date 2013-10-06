@@ -1,0 +1,10 @@
+.DS_Store
+/target
+/classes
+/checkouts
+/native
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+.lein-*
