@@ -1,4 +1,4 @@
-(defproject reditore "0.9.0"
+(defproject reditore "0.9.1"
   :description "Ring session store implemented on top of redis."
   :url "https://github.com/schovi/reditore"
   :license {:name "MIT License"
