@@ -1,5 +1,9 @@
 (defproject reditore "0.9.0"
-  :url ""
+  :description "Ring session store implemented on top of redis."
+  :url "https://github.com/schovi/reditore"
+  :license {:name "MIT License"
+            :url "http://www.opensource.org/licenses/mit-license.php"
+            :distribution :repo}
   :description "Clojure/Ring session store implemented on top of redis"
   :dependencies [[org.clojure/clojure "1.2.1"]
                  [ring/ring-core "1.2.0-beta2"]
