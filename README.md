@@ -57,7 +57,7 @@ to `:dependencies` in your `project.clj`.
 
 (def app
   (app-handler [my-routes]
-			   :store (session-redis-store session-redis-server)
+			   :store (session-redis-store redis-connection)
 			   :middleware [])
 ```
 
@@ -66,25 +66,25 @@ to `:dependencies` in your `project.clj`.
 When you want to use json **compatible mode**
 
 ``` clj
-# require compatible json-session-redis-store
+; require compatible json-session-redis-store
 (:require [reditore.core :refer [json-session-redis-store]])
 ```
 
 ``` clj
-# use that 
+; use that 
 (json-session-redis-store redis-connection)
 ```
 
 Want sessions to automatically **expire**?
 
 ``` clj
-# expire after 12 hours
+; expire after 12 hours
 (session-redis-store redis-connection {:expire-secs (* 3600 12)})
 ```
 Or different **prefix** for redis key?
 
 ``` clj
-# Change prefix
+; Change prefix
 (session-redis-store redis-connection {:prefix "my-sessions"})
 ```
 
