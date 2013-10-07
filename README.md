@@ -25,7 +25,7 @@ to `:dependencies` in your `project.clj`.
 
 ## With Ring server
 
-```
+``` clj
 (ns myapp
   (:require [ring.middleware.session :refer [wrap-session]]
             [reditore.core :refer [session-redis-store]]))
@@ -43,7 +43,8 @@ to `:dependencies` in your `project.clj`.
 ```
 
 ## With Noir application
-```
+
+``` clj
 (ns myapp
   (:require [noir.util.middleware :refer [app-handler]]
             [reditore.core :refer [session-redis-store]]))
@@ -64,24 +65,25 @@ to `:dependencies` in your `project.clj`.
 
 When you want to use json **compatible mode**
 
-```
+``` clj
 # require compatible json-session-redis-store
 (:require [reditore.core :refer [json-session-redis-store]])
 ```
-```
+
+``` clj
 # use that 
 (json-session-redis-store redis-connection)
 ```
 
 Want sessions to automatically **expire**?
 
-```
+``` clj
 # expire after 12 hours
 (session-redis-store redis-connection {:expire-secs (* 3600 12)})
 ```
 Or different **prefix** for redis key?
 
-```
+``` clj
 # Change prefix
 (session-redis-store redis-connection {:prefix "my-sessions"})
 ```
