@@ -31,9 +31,9 @@ to `:dependencies` in your `project.clj`.
             [reditore.core :refer [session-redis-store]]))
 
 (def redis-connection
-{:pool {}
- :spec {:host "127.0.0.1"
-		:port 6379}})
+  {:pool {}
+   :spec {:host "127.0.0.1"
+          :port 6379}})
 
 (def app
   (-> your-routes
@@ -51,9 +51,9 @@ to `:dependencies` in your `project.clj`.
 
 
 (def redis-connection
-{:pool {}
- :spec {:host "127.0.0.1"
-		:port 6379}})
+  {:pool {}
+   :spec {:host "127.0.0.1"
+          :port 6379}})
 
 (def app
   (app-handler [my-routes]
